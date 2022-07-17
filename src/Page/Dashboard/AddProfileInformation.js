@@ -18,7 +18,7 @@ const AddProfileInformation = () => {
         let education = event.target?.education?.value;
         const information = { name, email, number, address, education, photoURL }
         console.log(information)
-        fetch('http://localhost:5000/profile', {
+        fetch('https://damp-castle-29212.herokuapp.com/profile', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

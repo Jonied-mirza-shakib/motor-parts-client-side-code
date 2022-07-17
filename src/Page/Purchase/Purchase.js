@@ -10,7 +10,7 @@ const Purchase = () => {
     const [user, userLoading, userError] = useAuthState(auth);
     const [order, setOrder] = useState();
     const { data: toolsId, isLoading } = useQuery(['part',], () =>
-        fetch(`http://localhost:5000/parts/${id}`)
+        fetch(`https://damp-castle-29212.herokuapp.com/parts/${id}`)
             .then(res => res.json())
     )
     if (isLoading || userLoading) {
@@ -26,7 +26,7 @@ const Purchase = () => {
         let orderInformation = { name, email, number, address, order };
         // console.log(orderInformation)
         setOrder(order)
-        const url = `http://localhost:5000/orders`;
+        const url = `https://damp-castle-29212.herokuapp.com/orders`;
         console.log(url)
         fetch(url, {
             method: 'POST',

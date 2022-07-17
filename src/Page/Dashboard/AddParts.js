@@ -27,7 +27,7 @@ const AddParts = () => {
                         minimum_order_quantity: data.minimum_order_quantity,
                         img: img,
                     }
-                    fetch('http://localhost:5000/parts', {
+                    fetch('https://damp-castle-29212.herokuapp.com/parts', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',

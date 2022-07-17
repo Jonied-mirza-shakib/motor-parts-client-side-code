@@ -25,7 +25,7 @@ const AddReview = () => {
                         rating: data.rating,
                         img: img,
                     }
-                    fetch('http://localhost:5000/review', {
+                    fetch('https://damp-castle-29212.herokuapp.com/review', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',

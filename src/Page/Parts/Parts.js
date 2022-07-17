@@ -8,7 +8,7 @@ const Parts = () => {
     const [tools, setTools] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/parts',{
+        fetch('https://damp-castle-29212.herokuapp.com/parts',{
             method: 'GET',
             headers: {
                 authorization:`Bearer ${localStorage.getItem('accessToken')}`

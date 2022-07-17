@@ -8,7 +8,7 @@ const Home = () => {
     const [tools, setTools] = useState([])
     const [review, setReview] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/parts',{
+        fetch('https://damp-castle-29212.herokuapp.com/parts',{
             method: 'GET',
             headers: {
                 authorization:`Bearer ${localStorage.getItem('accessToken')}`
@@ -19,7 +19,7 @@ const Home = () => {
     }, [])
 
     useEffect(() => {
-        fetch('http://localhost:5000/review',{
+        fetch('https://damp-castle-29212.herokuapp.com/review',{
             method: 'GET',
             headers: {
                 authorization:`Bearer ${localStorage.getItem('accessToken')}`

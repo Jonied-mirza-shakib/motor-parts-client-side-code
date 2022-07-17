@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const Reviews = () => {
     const [review, setReview] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/review',{
+        fetch('https://damp-castle-29212.herokuapp.com/review',{
             method: 'GET',
             headers: {
                 authorization:`Bearer ${localStorage.getItem('accessToken')}`
