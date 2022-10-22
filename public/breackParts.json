@@ -1,0 +1,20 @@
+[
+    {
+        "_id":"1",
+        "name":"Cras idrisusi opsa voluptas",
+        "img":"https://i.ibb.co/7jLLZxn/cras-idrisusi-opsa-voluptas.jpg",
+        "price":64
+    },
+    {
+        "_id":"2",
+        "name":"Deep patoni repeat predefin",
+        "img":"https://i.ibb.co/kHBPD0y/deep-patoni-repeat-predefin.jpg",
+        "price":40
+    },
+    {
+    "_id":"3",
+     "name":"Rutrum onvopxe sapiente",
+     "img":"https://i.ibb.co/m52nSwY/rutrum-onvopxe-sapiente-delectus.jpg",
+     "price":35   
+    }
+]

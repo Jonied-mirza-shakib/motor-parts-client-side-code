@@ -3,6 +3,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom'
 import auth from '../../firebase.init';
+import './Navbar.css'
 
 const Navbar = () => {
     const [user, loading, error] = useAuthState(auth);
@@ -11,12 +12,14 @@ const Navbar = () => {
         localStorage.removeItem('accessToken')
     };
     const menuItem = <>
-        <li><Link to='/'>HOME</Link></li>
-        <li><Link to='/parts'>PARTS</Link></li>
-        <li><Link to='/reviews'>REVIEWS</Link></li>
-        <li><Link to='/blog'>BLOG</Link></li>
+        <li className='navbar-list'><Link to='/'>HOME</Link></li>
+        <li className='navbar-list'><Link to='/shop'>SHOP</Link></li>
+        <li className='navbar-list'><Link to='/features'>FEATURES</Link></li>
+        <li className='navbar-list'><Link to='/collection'>COLLECTION</Link></li>
+        <li className='navbar-list'><Link to='/blog'>BLOG</Link></li>
+        <li className='navbar-list'><Link to='/aboutUs'>ABOUT US</Link></li>
         {
-            user && <li><Link to='/dashboard'>DASHBOARD</Link></li>
+            user && <li className='navbar-list'><Link to='/dashboard'>DASHBOARD</Link></li>
         }
         {
             user ? <button onClick={logout} className='btn btn-primary text-white' type='button'>Sign Out</button> : <li><Link to='/login'>LOGIN</Link></li>

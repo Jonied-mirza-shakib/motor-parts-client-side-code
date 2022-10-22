@@ -12,12 +12,6 @@ const firebaseConfig = {
     storageBucket: "motor-parts-website.appspot.com",
     messagingSenderId: "515371754389",
     appId: "1:515371754389:web:e5fdf2b0dc536912018c9c"
-    // apiKey: process.env.REACT_APP_APIKEY,
-    // authDomain: process.env.REACT_APP_AUTHDOMAIN,
-    // projectId: process.env.REACT_APP_PROJECTID,
-    // storageBucket: process.env.REACT_APP_STORAGEBUCKET,
-    // messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
-    // appId: process.env.REACT_APP_APPID,
 };
 
 // Initialize Firebase

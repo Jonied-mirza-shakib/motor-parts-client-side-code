@@ -1,0 +1,60 @@
+.best-seller-main{
+    width: 90%;
+    margin: auto;
+}
+.best-seller-single-title{
+    font-size: 13px;
+    font-weight: 300;
+    font-family: sans-serif;
+    color: orangered;
+    margin-top: 50px;
+    text-align: center;
+}
+.best-seller-entry-title{
+    font-size: 45px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+.best-seller-entry-title::after{
+    content: '.';
+    color: orangered;
+    font-size: 45px;
+    margin-left: 5px;
+}
+.best-seller-entry-title::before{
+    content: '.';
+    color: orangered;
+    font-size: 45px;
+    margin-right: 5px;
+}
+
+.best-seller-title{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+}
+.best-seller-price{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+}
+.best-seller-title:hover{
+   color: orangered;
+}
+.best-seller-price:hover{
+    color: orangered;
+}
+
+
+
+@media only screen and (max-width: 575px){
+    .best-seller-entry-title{
+        font-size: 30px;
+    }
+}

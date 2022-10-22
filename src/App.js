@@ -2,16 +2,11 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './Page/Navbar/Navbar';
 import Home from './Page/Home/Home'
-import Parts from './Page/Parts/Parts'
-import BusinessSummary from './Page/BusinessSummary/BusinessSummary'
-import Reviews from './Page/Reviews/Reviews'
-import Blog from './Page/Blog/Blog'
 import Login from './Page/Login/Login'
 import Dashboard from './Page/Dashboard/Dashboard';
 import SignUp from './Page/SignUp/SignUp';
 import RequireAuth from './Page/RequireAuth/RequireAuth';
 import Footer from './Page/Footer/Footer';
-import Purchase from './Page/Purchase/Purchase';
 import AddReview from './Page/Dashboard/AddReview';
 import MyOrders from './Page/Dashboard/MyOrders';
 import MyProfile from './Page/Dashboard/MyProfile';
@@ -23,22 +18,15 @@ import UpdateParts from './Page/Dashboard/UpdateParts';
 import Payment from './Page/Dashboard/Payment';
 import AllUser from './Page/Dashboard/AllUser';
 import RequireAdmin from './Page/RequireAuth/RequireAdmin';
+import BestSeller from './Page/Dashboard/BestSeller';
 
 function App() {
   return (
     <div>
-      <div style={{ width: '80%', margin: 'auto' }}>
+      <div>
         <Navbar></Navbar>
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
-          <Route path='/parts' element={
-            <RequireAuth>
-              <Parts></Parts>
-            </RequireAuth>
-          }></Route>
-          <Route path='/reviews' element={<Reviews></Reviews>}></Route>
-          <Route path='/blog' element={<Blog></Blog>}></Route>
-          <Route path='/purchase/:id' element={<Purchase></Purchase>}></Route>
           <Route path='/dashboard' element={
              <RequireAuth>
              <Dashboard></Dashboard>
@@ -51,6 +39,7 @@ function App() {
             <Route path='addProfileInformation' element={<AddProfileInformation></AddProfileInformation>}></Route>
             <Route path='updateProfile/:id' element={<UpdateProfile></UpdateProfile>}></Route>
             <Route path='addParts' element={<RequireAdmin><AddParts></AddParts></RequireAdmin>}></Route>
+            <Route path='bestSeller' element={<RequireAdmin><BestSeller></BestSeller></RequireAdmin>}></Route>
             <Route path='allUser' element={<RequireAdmin><AllUser></AllUser></RequireAdmin>}></Route>
             <Route path='manageParts' element={<RequireAdmin><ManageParts></ManageParts></RequireAdmin>}></Route>
             <Route path='updateParts/:id' element={<UpdateParts></UpdateParts>}></Route>

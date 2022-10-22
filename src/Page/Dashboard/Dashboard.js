@@ -22,6 +22,7 @@ const Dashboard = () => {
                     {!admin&&<li className='text-accent font-bold'><Link to='/dashboard/profile'>My Profile</Link></li>}
                    {!admin&& <li className='text-accent font-bold'><Link to='/dashboard/addProfileInformation'>Add Profile Information</Link></li>}
                     {admin&&<li className='text-accent font-bold'><Link to='/dashboard/addParts'>Add Parts</Link></li>}
+                    {admin&&<li className='text-accent font-bold'><Link to='/dashboard/bestSeller'>Best Seller</Link></li>}
                     {admin&&<li className='text-accent font-bold'><Link to='/dashboard/allUser'>All user</Link></li>}
                     {admin&&<li className='text-accent font-bold'><Link to='/dashboard/manageParts'>Manage Parts</Link></li>}
                 </ul>
