@@ -1,0 +1,28 @@
+.top-categories-main{
+    width: 90%;
+    margin: auto;
+}
+.top-categories-single-title{
+    font-size: 13px;
+    font-weight: 300;
+    font-family: sans-serif;
+    color: orangered;
+    margin-top: 100px;
+    text-align: center;
+}
+.top-categories-entry-title{
+    font-size: 45px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+
+
+
+@media only screen and (max-width: 575px){
+    .top-categories-entry-title{
+        font-size: 25px;
+    }
+}
