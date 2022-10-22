@@ -12,7 +12,6 @@ import MyOrders from './Page/Dashboard/MyOrders';
 import MyProfile from './Page/Dashboard/MyProfile';
 import AddProfileInformation from './Page/Dashboard/AddProfileInformation';
 import UpdateProfile from './Page/Dashboard/UpdateProfile';
-import AddParts from './Page/Dashboard/AddParts';
 import ManageParts from './Page/Dashboard/ManageParts';
 import UpdateParts from './Page/Dashboard/UpdateParts';
 import Payment from './Page/Dashboard/Payment';
@@ -38,7 +37,6 @@ function App() {
             <Route path='profile' element={<MyProfile></MyProfile>}></Route>
             <Route path='addProfileInformation' element={<AddProfileInformation></AddProfileInformation>}></Route>
             <Route path='updateProfile/:id' element={<UpdateProfile></UpdateProfile>}></Route>
-            <Route path='addParts' element={<RequireAdmin><AddParts></AddParts></RequireAdmin>}></Route>
             <Route path='bestSeller' element={<RequireAdmin><BestSeller></BestSeller></RequireAdmin>}></Route>
             <Route path='allUser' element={<RequireAdmin><AllUser></AllUser></RequireAdmin>}></Route>
             <Route path='manageParts' element={<RequireAdmin><ManageParts></ManageParts></RequireAdmin>}></Route>

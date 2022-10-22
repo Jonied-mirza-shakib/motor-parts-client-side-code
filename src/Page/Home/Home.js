@@ -1,5 +1,6 @@
 import React from 'react';
 import BestSellers from '../BestSellers/BestSellers';
+import NewArrivals from '../NewArrivals/NewArrivals';
 import Banner from './Banner';
 import './Home.css'
 import VehicleSearch from './VehicleSearch';
@@ -10,6 +11,7 @@ const Home = () => {
           <Banner></Banner>
           <VehicleSearch></VehicleSearch>
           <BestSellers></BestSellers>
+          <NewArrivals></NewArrivals>
         </div>
     );
 };
