@@ -18,6 +18,7 @@ import Payment from './Page/Dashboard/Payment';
 import AllUser from './Page/Dashboard/AllUser';
 import RequireAdmin from './Page/RequireAuth/RequireAdmin';
 import BestSeller from './Page/Dashboard/BestSeller';
+import AddBlog from './Page/Dashboard/AddBlog';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route path='addProfileInformation' element={<AddProfileInformation></AddProfileInformation>}></Route>
             <Route path='updateProfile/:id' element={<UpdateProfile></UpdateProfile>}></Route>
             <Route path='bestSeller' element={<RequireAdmin><BestSeller></BestSeller></RequireAdmin>}></Route>
+            <Route path='addBlog' element={<RequireAdmin><AddBlog></AddBlog></RequireAdmin>}></Route>
             <Route path='allUser' element={<RequireAdmin><AllUser></AllUser></RequireAdmin>}></Route>
             <Route path='manageParts' element={<RequireAdmin><ManageParts></ManageParts></RequireAdmin>}></Route>
             <Route path='updateParts/:id' element={<UpdateParts></UpdateParts>}></Route>
