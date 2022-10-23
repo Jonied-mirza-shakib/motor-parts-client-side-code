@@ -1,5 +1,6 @@
 import React from 'react';
 import BestSellers from '../BestSellers/BestSellers';
+import Blog from '../Blog/Blog';
 import Brand from '../Brand/Brand';
 import NewArrivals from '../NewArrivals/NewArrivals';
 import TopCategories from '../TopCategories/TopCategories';
@@ -16,6 +17,7 @@ const Home = () => {
           <NewArrivals></NewArrivals>
           <TopCategories></TopCategories>
           <Brand></Brand>
+          <Blog></Blog>
         </div>
     );
 };
