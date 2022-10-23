@@ -61,7 +61,7 @@ const NewArrivals = () => {
                                 <figure><img src={part.img} alt="" className='w-100' /></figure>
                                 <div className="card-body">
                                     <h1 className='new-arrival-title'>NAME: {part.name}</h1>
-                                    <p className='new-arrival-price'>PRICE: {part.price}</p>
+                                    <p className='new-arrival-price'>PRICE: ${part.price}</p>
                                     <button type="button" className='btn btn-outline btn-primary'>ADD TO CART</button>
                                 </div>
                             </div>

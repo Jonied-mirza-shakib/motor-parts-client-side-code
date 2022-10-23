@@ -3,6 +3,7 @@ import BestSellers from '../BestSellers/BestSellers';
 import Blog from '../Blog/Blog';
 import Brand from '../Brand/Brand';
 import NewArrivals from '../NewArrivals/NewArrivals';
+import Support from '../Support/Support';
 import TopCategories from '../TopCategories/TopCategories';
 import Banner from './Banner';
 import './Home.css'
@@ -18,6 +19,7 @@ const Home = () => {
           <TopCategories></TopCategories>
           <Brand></Brand>
           <Blog></Blog>
+          <Support></Support>
         </div>
     );
 };

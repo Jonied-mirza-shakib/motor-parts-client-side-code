@@ -19,6 +19,7 @@ import AllUser from './Page/Dashboard/AllUser';
 import RequireAdmin from './Page/RequireAuth/RequireAdmin';
 import BestSeller from './Page/Dashboard/BestSeller';
 import AddBlog from './Page/Dashboard/AddBlog';
+import SingleBlog from './Page/Blog/SingleBlog';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Navbar></Navbar>
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
+          <Route path='/singleBlog/:id' element={<SingleBlog></SingleBlog>}></Route>
           <Route path='/dashboard' element={
              <RequireAuth>
              <Dashboard></Dashboard>

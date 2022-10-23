@@ -20,7 +20,7 @@ const BestSellers = () => {
                         <figure><img src={part.img} alt="" className='w-100' /></figure>
                         <div className="card-body">
                         <h1 className='best-seller-title'>NAME: {part.name}</h1>
-                        <p className='best-seller-price'>PRICE: {part.price}</p>
+                        <p className='best-seller-price'>PRICE: ${part.price}</p>
                         <button type="button" className='btn btn-outline btn-primary'>ADD TO CART</button>
                         </div>
                     </div>

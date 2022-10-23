@@ -1,0 +1,125 @@
+.support-main{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 0px;
+}
+.icon-section-1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.icon-section-1 h2{
+    font-size: 30px;
+    margin-right: 20px;
+    color: dimgray;
+    cursor: pointer;
+}
+.icon-section-1 h4{
+    font-size: 16px;
+    color: dimgray;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.icon-section-1 p{
+    font-size: 14px;
+    color: dimgray;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.icon-section-2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.icon-section-2 h2{
+    font-size: 30px;
+    margin-right: 20px;
+    color: dimgray;
+    cursor: pointer;
+}
+.icon-section-2 h4{
+    font-size: 16px;
+    color: dimgray;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.icon-section-2 p{
+    font-size: 14px;
+    color: dimgray;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.icon-section-3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.icon-section-3 h2{
+    font-size: 30px;
+    margin-right: 20px;
+    color: dimgray;
+    cursor: pointer;
+}
+.icon-section-3 h4{
+    font-size: 16px;
+    color: dimgray;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.icon-section-3 p{
+    font-size: 14px;
+    color: dimgray;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.icon-section-4{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.icon-section-4 h2{
+    font-size: 30px;
+    margin-right: 20px;
+    color: dimgray;
+    cursor: pointer;
+}
+.icon-section-4 h4{
+    font-size: 16px;
+    color: dimgray;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.icon-section-4 p{
+    font-size: 14px;
+    color: dimgray;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 767px) {
+    .icon-section-1{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .icon-section-2{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .icon-section-3{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .icon-section-4{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
