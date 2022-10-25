@@ -11,10 +11,8 @@ const SingleBlog = () => {
             .then(data => setBlog(data))
     }, [id])
     return (
-        <div className='blog-main'>
-            <p className='blog-single-title'>OUR RECENT POSTS</p>
-            <h1 className='blog-entry-title'>LATEST BLOG</h1>
-            <div className="card card-compact w-mx-w bg-base-100 shadow-xl">
+        <div style={{width:"60%",margin:"auto",marginBottom:"100px"}}>
+            <div className="card card-compact w-mx-w bg-base-100 shadow-xl mt-10">
                 <figure><img src={blog.img} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Title: {blog.blogTitle}</h2>

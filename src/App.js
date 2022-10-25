@@ -20,6 +20,7 @@ import RequireAdmin from './Page/RequireAuth/RequireAdmin';
 import BestSeller from './Page/Dashboard/BestSeller';
 import AddBlog from './Page/Dashboard/AddBlog';
 import SingleBlog from './Page/Blog/SingleBlog';
+import SingleProduct from './Page/SingleProduct/SingleProduct';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
           <Route path='/singleBlog/:id' element={<SingleBlog></SingleBlog>}></Route>
+          <Route path='/singleProduct/:id' element={<SingleProduct></SingleProduct>}></Route>
           <Route path='/dashboard' element={
              <RequireAuth>
              <Dashboard></Dashboard>
