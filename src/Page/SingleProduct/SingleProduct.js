@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { addToDb, getStoredCart, removeFromDb } from '../../utilities/fakedb';
+import BookingModal from '../Cart/BookingModal';
 import Cart from '../Cart/Cart';
 import './SingleProduct.css'
 
@@ -9,6 +10,7 @@ const SingleProduct = () => {
     const { id } = useParams()
     const [part, setParts] = useState([]);
     const [cart, setCart] = useState([]);
+    const [allParts,setAllParts]=useState(null);
     useEffect(() => {
         fetch('http://localhost:5000/bestSeller')
             .then(res => res.json())
@@ -78,13 +80,16 @@ const SingleProduct = () => {
                     </div>
                 </div>
                 <div>
-                    <div className="card w-mx-w bg-base-200 shadow-xl">
+                    <div className="card w-mx-w shadow-xl" style={{backgroundColor:"#F9FAFC"}}>
                         <div className='card-body'>
-                            <Cart cart={cart}></Cart>
+                            <Cart cart={cart} setAllParts={setAllParts}></Cart>
                         </div>
                     </div>
                 </div>
             </div>
+            {
+            allParts&&<BookingModal allParts={allParts} setAllParts={setAllParts}></BookingModal>
+           }
         </div>
     );
 };

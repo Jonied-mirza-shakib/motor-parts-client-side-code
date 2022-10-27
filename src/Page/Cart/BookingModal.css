@@ -1,0 +1,13 @@
+.booking-form-validation label{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+.booking-form-validation input{
+    width: 100%;
+    padding: 10px 10px;
+    outline: none;
+    border: 1px solid darkblue;
+    margin-bottom: 10px;
+}

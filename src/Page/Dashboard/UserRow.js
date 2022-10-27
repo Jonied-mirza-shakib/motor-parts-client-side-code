@@ -3,7 +3,7 @@ import React from 'react';
 const UserRow = ({users,refetch}) => {
     const {_id,email,role}=users;
     const makeAdmin=()=>{
-        fetch(`https://damp-castle-29212.herokuapp.com/user/admin/${email}`, {
+        fetch(`http://localhost:5000/user/admin/${email}`, {
   method: 'PUT', // or 'PUT'
   headers: {
     "Content-Type": "application/json",
@@ -26,7 +26,7 @@ const UserRow = ({users,refetch}) => {
 })
     }
     const handleDelete=id=>{
-      fetch(`https://damp-castle-29212.herokuapp.com/user/${id}`,{
+      fetch(`http://localhost:5000/user/${id}`,{
         method:'DELETE'
       })
       .then(res=>res.json())

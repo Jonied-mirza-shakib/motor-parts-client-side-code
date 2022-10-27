@@ -8,7 +8,7 @@ const UpdateProfile = () => {
     const [update, setUpdate] = useState({});
     const [user, loading] = useAuthState(auth);
     useEffect(() => {
-        fetch(`https://damp-castle-29212.herokuapp.com/profile/${id}`)
+        fetch(`http://localhost:5000/profile/${id}`)
             .then(res => res.json())
             .then(data => setUpdate(data))
     }, [id])
@@ -20,7 +20,7 @@ const UpdateProfile = () => {
         const address = event.target?.address?.value;
         let education = event.target?.education?.value;
         const information = { number, address, education }
-        const url = `https://damp-castle-29212.herokuapp.com/profile/${id}`;
+        const url = `http://localhost:5000/profile/${id}`;
         fetch(url, {
             method: "PUT",
             headers: {

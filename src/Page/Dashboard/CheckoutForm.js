@@ -11,7 +11,7 @@ const CheckoutForm = ({pay}) => {
     const {_id,order,name}=pay;
 
     useEffect(()=>{
-      fetch('https://damp-castle-29212.herokuapp.com/create-payment-intent', {
+      fetch('http://localhost:5000/create-payment-intent', {
   method: 'POST', // or 'PUT'
   headers: {
     'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ const CheckoutForm = ({pay}) => {
               tranjactionId: paymentIntent.id
             }
 
-            fetch(`https://damp-castle-29212.herokuapp.com/orders/${_id}`,{
+            fetch(`http://localhost:5000/orders/${_id}`,{
               method:'PATCH',
               headers: {
                 'Content-Type': 'application/json',

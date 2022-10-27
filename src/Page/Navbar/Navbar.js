@@ -15,7 +15,6 @@ const Navbar = () => {
         <li className='navbar-list'><Link to='/'>HOME</Link></li>
         <li className='navbar-list'><Link to='/shop'>SHOP</Link></li>
         <li className='navbar-list'><Link to='/features'>FEATURES</Link></li>
-        <li className='navbar-list'><Link to='/collection'>COLLECTION</Link></li>
         <li className='navbar-list'><Link to='/blog'>BLOG</Link></li>
         <li className='navbar-list'><Link to='/aboutUs'>ABOUT US</Link></li>
         {

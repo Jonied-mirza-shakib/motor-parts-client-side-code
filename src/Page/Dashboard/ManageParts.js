@@ -5,7 +5,7 @@ const ManageParts = () => {
     const [parts, setParts] = useState();
     const navigate = useNavigate();
     useEffect(() => {
-        fetch('https://damp-castle-29212.herokuapp.com/parts',{
+        fetch('http://localhost:5000/parts',{
             method: 'GET',
             headers: {
                 authorization:`Bearer ${localStorage.getItem('accessToken')}`
@@ -23,7 +23,7 @@ const ManageParts = () => {
         console.log(id)
         const proceed = window.confirm('Are You Sure you want to delete')
         if (proceed) {
-            const url = `https://damp-castle-29212.herokuapp.com/parts/${id}`
+            const url = `http://localhost:5000/parts/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

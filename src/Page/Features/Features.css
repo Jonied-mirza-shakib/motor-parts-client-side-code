@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+.Features-main{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 100px;
+}
+.new-arrival-single-title{
+    font-size: 13px;
+    font-weight: 300;
+    font-family: sans-serif;
+    color: orangered;
+    margin-top: 50px;
+    text-align: center;
+}
+.new-arrival-entry-title{
+    font-size: 45px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+.new-arrival-entry-title::after{
+    content: '.';
+    color: orangered;
+    font-size: 45px;
+    margin-left: 5px;
+}
+.new-arrival-entry-title::before{
+    content: '.';
+    color: orangered;
+    font-size: 45px;
+    margin-right: 5px;
+}
+
+.new-arrival-title{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+.new-arrival-price{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+.new-arrival-title:hover{
+   color: orangered;
+}
+.new-arrival-price:hover{
+    color: orangered;
+}
+
+
+
+@media only screen and (max-width: 575px){
+    .new-arrival-entry-title{
+        font-size: 25px;
+    }
+}

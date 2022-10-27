@@ -5,7 +5,7 @@ const MyProfile = () => {
     const [profile, setProfile] = useState();
     const navigate = useNavigate();
     useEffect(() => {
-        fetch('https://damp-castle-29212.herokuapp.com/profile')
+        fetch('http://localhost:5000/profile')
             .then(res => res.json())
             .then(data => {
                 console.log(data)

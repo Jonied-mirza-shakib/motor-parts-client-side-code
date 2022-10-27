@@ -1,20 +1,21 @@
 .order-summery h2{
     font-size: 20px;
     font-family: sans-serif;
-    color: dimgray;
+    color: black;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .order-summery p{
     font-size: 16px;
     font-weight: 700;
     font-family: sans-serif;
-    color: dimgray;
-    margin-bottom: 10px;
+    color: #6F727C;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #6F727C;
 }
 .order-summery h5{
     font-size: 18px;
     font-weight: 700;
     font-family: sans-serif;
-    color: dimgray;
+    color: black;
 }

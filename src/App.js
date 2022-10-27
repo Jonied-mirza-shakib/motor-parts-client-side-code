@@ -21,6 +21,9 @@ import BestSeller from './Page/Dashboard/BestSeller';
 import AddBlog from './Page/Dashboard/AddBlog';
 import SingleBlog from './Page/Blog/SingleBlog';
 import SingleProduct from './Page/SingleProduct/SingleProduct';
+import Blog from './Page/Blog/Blog';
+import Shop from './Page/Shop/Shop';
+import Features from './Page/Features/Features';
 
 function App() {
   return (
@@ -31,6 +34,9 @@ function App() {
           <Route path='/' element={<Home></Home>}></Route>
           <Route path='/singleBlog/:id' element={<SingleBlog></SingleBlog>}></Route>
           <Route path='/singleProduct/:id' element={<SingleProduct></SingleProduct>}></Route>
+          <Route path='/blog' element={<Blog></Blog>}></Route>
+          <Route path='/shop' element={<Shop></Shop>}></Route>
+          <Route path='/features' element={<Features></Features>}></Route>
           <Route path='/dashboard' element={
              <RequireAuth>
              <Dashboard></Dashboard>

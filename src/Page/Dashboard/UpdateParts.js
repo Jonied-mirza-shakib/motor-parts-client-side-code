@@ -5,7 +5,7 @@ const UpdateParts = () => {
     const { id } = useParams();
     const [parts, setParts] = useState({});
     useEffect(() => {
-        fetch(`https://damp-castle-29212.herokuapp.com/parts/${id}`)
+        fetch(`http://localhost:5000/parts/${id}`)
             .then(res => res.json())
             .then(data => setParts(data))
     }, [id])
@@ -19,7 +19,7 @@ const UpdateParts = () => {
         const quantity = event.target?.quantity?.value;
         const minimum_order_quantity = event.target?.minimum_order_quantity?.value;
         const data = { name, description, photoURL, price, quantity, minimum_order_quantity }
-        const url = `https://damp-castle-29212.herokuapp.com/parts/${id}`;
+        const url = `http://localhost:5000/parts/${id}`;
         fetch(url, {
             method: "PUT",
             headers: {
