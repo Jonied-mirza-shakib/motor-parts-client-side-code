@@ -43,7 +43,7 @@ const MyOrders = () => {
                             <th></th>
                             <th>Name</th>
                             <th>Number</th>
-                            <th>Order</th>
+                            <th>Total</th>
                             <th>Payment</th>
                             <th>Delete</th>
                         </tr>
@@ -56,12 +56,12 @@ const MyOrders = () => {
                                     <th>{index + 1}</th>
                                     <td>{orders.name}</td>
                                     <td>{orders.number}</td>
-                                    <td>{orders.order}</td>
+                                    <td>${orders.total}</td>
                                     <td>
-                                        {(orders.order && !orders.paid) && <Link to={`/dashboard/payment/${orders._id}`}> <button type="button" className='btn btn-success btn-xs'>pay</button> </Link>}
+                                        {(orders.total && !orders.paid) && <Link to={`/dashboard/payment/${orders._id}`}> <button type="button" className='btn btn-success btn-xs'>pay</button> </Link>}
                                     </td>
                                     <td>
-                                        {(orders.order && orders.paid) && <div>
+                                        {(orders.total && orders.paid) && <div>
                                             <span className='text-success'>paid</span>
                                             <br/>
                                             <span className='text-success'>Transaction Id:{orders.tranjactionId}</span>
