@@ -20,6 +20,7 @@ const SingleProduct = () => {
 
     useEffect(() => {
         const storedCart = getStoredCart();
+        console.log(storedCart)
         const saveCart = [];
         for (const id in storedCart) {
             const addedProduct = part.find(products => products._id === id)
@@ -73,7 +74,7 @@ const SingleProduct = () => {
                             <h1 className='best-seller-title'>NAME: {singleParts?.name}</h1>
                             <p className='best-seller-price'>PRICE: ${singleParts?.price}</p>
                             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10'>
-                                <button onClick={() => handleDecreaseBtn(singleParts)} type='button' className='btn btn-outline btn-primary text-xl'>-</button>
+                            <button onClick={() => handleDecreaseBtn(singleParts)} type='button' className='btn btn-outline btn-primary text-xl decrease-button'>-</button>
                                 <button onClick={() => handleIncreaseBtn(singleParts)} type='button' className='btn btn-outline btn-primary text-xl'>+</button>
                             </div>
                         </div>
