@@ -2,13 +2,14 @@
 .blog-main{
     width: 90%;
     margin: auto;
+    margin-bottom: 100px;
 }
 .blog-single-title{
+    margin-top: 50px;
     font-size: 13px;
     font-weight: 300;
     font-family: sans-serif;
     color: orangered;
-    margin-top: 100px;
     text-align: center;
 }
 .blog-entry-title{

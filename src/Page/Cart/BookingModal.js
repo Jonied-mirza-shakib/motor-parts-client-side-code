@@ -24,7 +24,9 @@ const BookingModal = ({ allParts,setAllParts }) => {
         })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data)            
+                console.log(data)
+                setAllParts(null)
+                deleteShoppingCart()            
             })
     }
 

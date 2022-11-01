@@ -1,95 +1,96 @@
 import React, { useEffect, useState } from 'react';
-import { CardElement,useStripe,useElements } from '@stripe/react-stripe-js';
-const CheckoutForm = ({pay}) => {
-    const stripe = useStripe();
-    const elements = useElements();
-    const [cardError,setCardError]=useState('');
-    const [success,setSuccess]=useState('');
-    const [proccessing,setProccessing]=useState(false);
-    const [tranjactionId,setTranjactionId]=useState('');
-    const [clientSecret, setClientSecret] = useState("");
-    const {_id,order,name}=pay;
+import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+const CheckoutForm = ({ pay }) => {
+  console.log(pay)
+  const stripe = useStripe();
+  const elements = useElements();
+  const [cardError, setCardError] = useState('');
+  const [success, setSuccess] = useState('');
+  const [proccessing, setProccessing] = useState(false);
+  const [tranjactionId, setTranjactionId] = useState('');
+  const [clientSecret, setClientSecret] = useState("");
+  const { _id, total, name } = pay;
 
-    useEffect(()=>{
-      fetch('http://localhost:5000/create-payment-intent', {
-  method: 'POST', // or 'PUT'
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({order}),
-})
-.then(response => response.json())
-.then(data => {
-  console.log('Success:', data);
-  if(data?.clientSecret){
-    setClientSecret(data.clientSecret)
-}
-})
-    },[order])
+  useEffect(() => {
+    fetch('http://localhost:5000/create-payment-intent', {
+      method: 'POST', // or 'PUT'
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ total }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+        if (data?.clientSecret) {
+          setClientSecret(data.clientSecret)
+        }
+      })
+  }, [total])
 
-    const handleSubmit=async (event)=>{
-        event.preventDefault();
-        if (!stripe || !elements) {
-            return;
-          }
-          const card = elements.getElement(CardElement);
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (!stripe || !elements) {
+      return;
+    }
+    const card = elements.getElement(CardElement);
 
-          if (card === null) {
-            return;
-          }
-          const {paymentMethodError, paymentMethod} = await stripe.createPaymentMethod({
-            type: 'card',
-            card,
-          });
-          setCardError(paymentMethodError?.message)
-          setProccessing(true)
-        //   confirm card payment method
-        const {paymentIntent, error: intentError} = await stripe.confirmCardPayment(
-            clientSecret,
-            {
-              payment_method: {
-                card: card,
-                billing_details: {
-                  name: name,
-                },
-              },
-            },
-          );
+    if (card === null) {
+      return;
+    }
+    const { paymentMethodError, paymentMethod } = await stripe.createPaymentMethod({
+      type: 'card',
+      card,
+    });
+    setCardError(paymentMethodError?.message)
+    setProccessing(true)
+    //   confirm card payment method
+    const { paymentIntent, error: intentError } = await stripe.confirmCardPayment(
+      clientSecret,
+      {
+        payment_method: {
+          card: card,
+          billing_details: {
+            name: name,
+          },
+        },
+      },
+    );
 
-          if(intentError){
-            setCardError(intentError?.message)
-            success('')
-            setProccessing(false)
-          }else{
-            setCardError('')
-            console.log(paymentIntent)
-            setTranjactionId(paymentIntent.id)
-            setSuccess('Congrats! Your payment is success')
+    if (intentError) {
+      setCardError(intentError?.message)
+      success('')
+      setProccessing(false)
+    } else {
+      setCardError('')
+      console.log(paymentIntent)
+      setTranjactionId(paymentIntent.id)
+      setSuccess('Congrats! Your payment is success')
 
-            const payment={
-              pay: _id,
-              tranjactionId: paymentIntent.id
-            }
+      const payment = {
+        pay: _id,
+        tranjactionId: paymentIntent.id
+      }
 
-            fetch(`http://localhost:5000/orders/${_id}`,{
-              method:'PATCH',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(payment),
-            }).then(res=>res.json())
-            .then(data=>{
-              setProccessing(false)
-              console.log(data)
-            })
-
-          }
-
+      fetch(`http://localhost:5000/orders/${_id}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payment),
+      }).then(res => res.json())
+        .then(data => {
+          setProccessing(false)
+          console.log(data)
+        })
 
     }
-    return (
-  <>
-        <form onSubmit={handleSubmit}>
+
+
+  }
+  return (
+    <>
+      <form onSubmit={handleSubmit}>
         <CardElement
           options={{
             style: {
@@ -106,21 +107,21 @@ const CheckoutForm = ({pay}) => {
             },
           }}
         />
-        <button className='btn btn-success btn-xs font-bold' type="submit" disabled={!stripe||!clientSecret}>
+        <button className='btn btn-success btn-xs font-bold' type="submit" disabled={!stripe || !clientSecret}>
           Pay
         </button>
       </form>
       {
-        cardError&&<p className='text-red-700 font-bold'>{cardError}</p>
+        cardError && <p className='text-red-700 font-bold'>{cardError}</p>
       }
       {
-        success&&<div className='text-green-700 font-bold'>
+        success && <div className='text-green-700 font-bold'>
           <p>{success}</p>
           <p>Your TranjactionId is <span className='text-orange-700 font-bold'>{tranjactionId}</span> </p>
-          </div>
+        </div>
       }
-  </>
-    );
+    </>
+  );
 };
 
 export default CheckoutForm;

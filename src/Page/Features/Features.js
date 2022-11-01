@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Slider from 'react-slick';
 import './Features.css'
 
 const Features = () => {
     const [parts, setParts] = useState([]);
+    const navigate=useNavigate();
     useEffect(() => {
         fetch('http://localhost:5000/bestSeller')
             .then(res => res.json())
@@ -43,6 +45,12 @@ const Features = () => {
             }
         ],
     };
+
+
+    const handleCart=id=>{
+        navigate(`/singleProduct/${id}`)
+    }
+
     return (
         <div className='Features-main'>
             <p className='new-arrival-single-title'>TOP SALE ON THIS MONTH</p>
@@ -57,7 +65,7 @@ const Features = () => {
                                 <div className="card-body">
                                     <h1 className='new-arrival-title'>NAME: {part.name}</h1>
                                     <p className='new-arrival-price'>PRICE: ${part.price}</p>
-                                    <button type="button" className='btn btn-outline btn-primary'>ADD TO CART</button>
+                                    <button onClick={()=>handleCart(part._id)} type="button" className='btn btn-outline btn-primary'>ADD TO CART</button>
                                 </div>
                             </div>
                         </div>

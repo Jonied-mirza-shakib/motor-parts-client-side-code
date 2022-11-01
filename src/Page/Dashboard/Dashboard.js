@@ -18,7 +18,7 @@ const Dashboard = () => {
                 <label for="my-drawer-2" class="drawer-overlay"></label>
                 <ul class="menu p-4 overflow-y-auto w-30 bg-base-100 text-base-content">
                     {!admin&&<li className='text-accent font-bold'><Link to='/dashboard'>My Review</Link></li>}
-                    {!admin&&<li className='text-accent font-bold'><Link to='/dashboard/order'>My Orders</Link></li>}
+                    <li className='text-accent font-bold'><Link to='/dashboard/order'>My Orders</Link></li>
                     {!admin&&<li className='text-accent font-bold'><Link to='/dashboard/profile'>My Profile</Link></li>}
                    {!admin&& <li className='text-accent font-bold'><Link to='/dashboard/addProfileInformation'>Add Profile Information</Link></li>}
                     {admin&&<li className='text-accent font-bold'><Link to='/dashboard/bestSeller'>Add Best Seller</Link></li>}
