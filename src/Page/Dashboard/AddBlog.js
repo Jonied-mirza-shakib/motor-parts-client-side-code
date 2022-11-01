@@ -25,7 +25,7 @@ const AddBlog = () => {
                         description: data.description,
                         img: img,
                     }
-                    fetch('http://localhost:5000/blog', {
+                    fetch('https://motor-parts-server-side-code-production.up.railway.app/blog', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',

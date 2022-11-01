@@ -15,7 +15,7 @@ const BookingModal = ({ allParts,setAllParts }) => {
         const number = event.target.number.value;
         const total = parseInt(event.target.total.value);
         const data = { name, email, number, total };
-        fetch('http://localhost:5000/orders', {
+        fetch('https://motor-parts-server-side-code-production.up.railway.app/orders', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

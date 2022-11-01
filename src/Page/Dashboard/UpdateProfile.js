@@ -8,7 +8,7 @@ const UpdateProfile = () => {
     const [update, setUpdate] = useState({});
     const [user, loading] = useAuthState(auth);
     useEffect(() => {
-        fetch(`http://localhost:5000/profile/${id}`)
+        fetch(`https://motor-parts-server-side-code-production.up.railway.app/profile/${id}`)
             .then(res => res.json())
             .then(data => setUpdate(data))
     }, [id])
@@ -20,7 +20,7 @@ const UpdateProfile = () => {
         const address = event.target?.address?.value;
         let education = event.target?.education?.value;
         const information = { number, address, education }
-        const url = `http://localhost:5000/profile/${id}`;
+        const url = `https://motor-parts-server-side-code-production.up.railway.app/profile/${id}`;
         fetch(url, {
             method: "PUT",
             headers: {

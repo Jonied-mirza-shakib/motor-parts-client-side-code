@@ -6,7 +6,7 @@ const SingleBlog = () => {
     const [blog, setBlog] = useState([]);
     const { id } = useParams();
     useEffect(() => {
-        fetch(`http://localhost:5000/blog/${id}`)
+        fetch(`https://motor-parts-server-side-code-production.up.railway.app/blog/${id}`)
             .then(res => res.json())
             .then(data => setBlog(data))
     }, [id])

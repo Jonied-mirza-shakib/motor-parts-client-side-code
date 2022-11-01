@@ -7,7 +7,7 @@ const useAdmin=user=>{
     useEffect(()=>{
         const email=user?.email;
         if(email){
-            fetch(`http://localhost:5000/admin/${email}`, {
+            fetch(`https://motor-parts-server-side-code-production.up.railway.app/admin/${email}`, {
                 method: 'GET', // or 'PUT'
                 headers: {
                   'content-type':'application/json',

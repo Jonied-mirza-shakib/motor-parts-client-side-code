@@ -18,7 +18,7 @@ const AddProfileInformation = () => {
         let education = event.target?.education?.value;
         const information = { name, email, number, address, education, photoURL }
         console.log(information)
-        fetch('http://localhost:5000/profile', {
+        fetch('https://motor-parts-server-side-code-production.up.railway.app/profile', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

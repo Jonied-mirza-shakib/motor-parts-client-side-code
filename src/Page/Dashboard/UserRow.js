@@ -3,7 +3,7 @@ import React from 'react';
 const UserRow = ({users,refetch}) => {
     const {_id,email,role}=users;
     const makeAdmin=()=>{
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`https://motor-parts-server-side-code-production.up.railway.app/user/admin/${email}`, {
   method: 'PUT', // or 'PUT'
   headers: {
     "Content-Type": "application/json",
@@ -26,7 +26,7 @@ const UserRow = ({users,refetch}) => {
 })
     }
     const handleDelete=id=>{
-      fetch(`http://localhost:5000/user/${id}`,{
+      fetch(`https://motor-parts-server-side-code-production.up.railway.app/user/${id}`,{
         method:'DELETE'
       })
       .then(res=>res.json())

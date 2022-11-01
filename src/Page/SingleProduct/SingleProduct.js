@@ -12,7 +12,7 @@ const SingleProduct = () => {
     const [cart, setCart] = useState([]);
     const [allParts,setAllParts]=useState(null);
     useEffect(() => {
-        fetch('http://localhost:5000/bestSeller')
+        fetch('https://motor-parts-server-side-code-production.up.railway.app/bestSeller')
             .then(res => res.json())
             .then(data => setParts(data))
     }, [])

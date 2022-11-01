@@ -7,7 +7,7 @@ import './NewArrivals.css'
 const NewArrivals = () => {
     const [parts, setParts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/bestSeller')
+        fetch('https://motor-parts-server-side-code-production.up.railway.app/bestSeller')
             .then(res => res.json())
             .then(data => setParts(data))
     }, [])

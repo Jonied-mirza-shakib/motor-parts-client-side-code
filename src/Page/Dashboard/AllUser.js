@@ -5,7 +5,7 @@ import UserRow from './UserRow';
 
 const AllUser = () => {
     const { data: user, isLoading, refetch } = useQuery('user', () =>
-    fetch('http://localhost:5000/user', {
+    fetch('https://motor-parts-server-side-code-production.up.railway.app/user', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

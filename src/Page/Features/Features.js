@@ -7,7 +7,7 @@ const Features = () => {
     const [parts, setParts] = useState([]);
     const navigate=useNavigate();
     useEffect(() => {
-        fetch('http://localhost:5000/bestSeller')
+        fetch('https://motor-parts-server-side-code-production.up.railway.app/bestSeller')
             .then(res => res.json())
             .then(data => setParts(data))
     }, [])

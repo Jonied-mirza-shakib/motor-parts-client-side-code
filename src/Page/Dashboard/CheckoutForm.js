@@ -12,7 +12,7 @@ const CheckoutForm = ({ pay }) => {
   const { _id, total, name } = pay;
 
   useEffect(() => {
-    fetch('http://localhost:5000/create-payment-intent', {
+    fetch('https://motor-parts-server-side-code-production.up.railway.app/create-payment-intent', {
       method: 'POST', // or 'PUT'
       headers: {
         'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ const CheckoutForm = ({ pay }) => {
         tranjactionId: paymentIntent.id
       }
 
-      fetch(`http://localhost:5000/orders/${_id}`, {
+      fetch(`https://motor-parts-server-side-code-production.up.railway.app/orders/${_id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

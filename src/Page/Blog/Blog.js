@@ -6,7 +6,7 @@ const Blog = () => {
     const [blog, setBlog] = useState([]);
     const navigate=useNavigate();
     useEffect(() => {
-        fetch('http://localhost:5000/blog')
+        fetch('https://motor-parts-server-side-code-production.up.railway.app/blog')
             .then(res => res.json())
             .then(data => setBlog(data))
     }, [])

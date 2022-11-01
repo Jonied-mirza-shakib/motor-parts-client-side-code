@@ -25,7 +25,7 @@ const BestSeller = () => {
                         price: parseInt(data.price),
                         img: img,
                     }
-                    fetch('http://localhost:5000/bestSeller', {
+                    fetch('https://motor-parts-server-side-code-production.up.railway.app/bestSeller', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',

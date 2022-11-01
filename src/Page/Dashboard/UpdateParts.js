@@ -8,7 +8,7 @@ const UpdateParts = () => {
     const { id } = useParams();
     const [parts, setParts] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/bestSeller/${id}`)
+        fetch(`https://motor-parts-server-side-code-production.up.railway.app/bestSeller/${id}`)
             .then(res => res.json())
             .then(data => setParts(data))
     }, [id])
@@ -21,7 +21,7 @@ const UpdateParts = () => {
             price: parseInt(data.price),
             img: data.img,
         }
-        const url = `http://localhost:5000/bestSeller/${id}`;
+        const url = `https://motor-parts-server-side-code-production.up.railway.app/bestSeller/${id}`;
         fetch(url, {
             method: "PUT",
             headers: {

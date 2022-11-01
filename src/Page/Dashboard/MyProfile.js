@@ -5,7 +5,7 @@ const MyProfile = () => {
     const [profile, setProfile] = useState();
     const navigate = useNavigate();
     useEffect(() => {
-        fetch('http://localhost:5000/profile')
+        fetch('https://motor-parts-server-side-code-production.up.railway.app/profile')
             .then(res => res.json())
             .then(data => {
                 console.log(data)

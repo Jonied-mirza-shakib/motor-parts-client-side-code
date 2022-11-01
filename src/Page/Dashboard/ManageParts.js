@@ -5,7 +5,7 @@ const ManageParts = () => {
     const [parts, setParts] = useState();
     const navigate = useNavigate();
     useEffect(() => {
-        fetch('http://localhost:5000/bestSeller', {
+        fetch('https://motor-parts-server-side-code-production.up.railway.app/bestSeller', {
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -23,7 +23,7 @@ const ManageParts = () => {
         console.log(id)
         const proceed = window.confirm('Are You Sure you want to delete')
         if (proceed) {
-            const url = `http://localhost:5000/bestSeller/${id}`
+            const url = `https://motor-parts-server-side-code-production.up.railway.app/bestSeller/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

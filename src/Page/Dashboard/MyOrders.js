@@ -8,7 +8,7 @@ const MyOrders = () => {
     const [user] = useAuthState(auth);
     useEffect(() => {
         if(user){
-            fetch(`http://localhost:5000/orders?email=${user?.email}`,{
+            fetch(`https://motor-parts-server-side-code-production.up.railway.app/orders?email=${user?.email}`,{
                 method: 'GET',
                 headers: {
                     authorization:`Bearer ${localStorage.getItem('accessToken')}`
@@ -21,7 +21,7 @@ const MyOrders = () => {
     }, [user])
 
     const handleDelete=id=>{
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://motor-parts-server-side-code-production.up.railway.app/orders/${id}`, {
   method: 'DELETE'
 })
   .then(res => res.json())

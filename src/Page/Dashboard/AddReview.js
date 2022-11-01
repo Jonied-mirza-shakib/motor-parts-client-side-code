@@ -25,7 +25,7 @@ const AddReview = () => {
                         rating: data.rating,
                         img: img,
                     }
-                    fetch('http://localhost:5000/review', {
+                    fetch('https://motor-parts-server-side-code-production.up.railway.app/review', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
